@@ -35,7 +35,22 @@
 	sigma_a = 1;
 	sigma_c = 0.2;
 	
-	csv_file_path_1 = 'G:\Research\Projects\Path_Integral_NN_MD\24020801\2_2_V_general\a_Data_sampling\Sample_store\Langevin_sample_store_V_general_mix_betadim=2_Msp=32768_Num_rep=32_Delta_t_sample=2_dt=0.005.csv';
+	Mix_beta_flag = input( 'Use single or mixed beta for training data?\n For single beta please input 1, for mixed beta please input 2:\n ' );
+	Use_laptop_flag = input( 'Using personal laptop or the office desktop?\n For personal laptop please input 1, for office desktop please input 2:\n ' );
+	if( Mix_beta_true == 2 )
+		if( Use_laptop_flag == 1 )
+			csv_file_path_1 = 'G:\Research\Projects\Path_Integral_NN_MD\24020801\2_2_V_general\a_Data_sampling\Sample_store\Langevin_sample_store_V_general_mix_betadim=2_Msp=32768_Num_rep=32_Delta_t_sample=2_dt=0.005.csv';
+		elseif( Use_laptop_flag == 2 )
+			csv_file_path_1 = 'C:\Users\ander\Documents\MATLAB\Path_Integral_MD_NN\24021901\24020801\2_2_V_general\a_Data_sampling\Sample_store\Langevin_sample_store_V_general_mix_betadim=2_Msp=32768_Num_rep=32_Delta_t_sample=2_dt=0.005.csv';
+		end
+	elseif( Mix_beta_flag == 1 )
+		if( Use_laptop_flag == 1 )
+			csv_file_path_1 = 'G:\Research\Projects\Path_Integral_NN_MD\24020801\2_2_V_general\a_Data_sampling\Sample_store\Langevin_sample_store_V_general_one_beta_dim=2_Msp=32768_Num_rep=32_Delta_t_sample=2_dt=0.005.csv';
+		elseif( Use_laptop_flag == 2 )
+			csv_file_path_1 = 'C:\Users\ander\Documents\MATLAB\Path_Integral_MD_NN\24021901\24020801\2_2_V_general\a_Data_sampling\Sample_store\Langevin_sample_store_V_general_one_beta_dim=2_Msp=32768_Num_rep=32_Delta_t_sample=2_dt=0.005.csv';
+		end
+	end
+	% csv_file_path_1 = 'G:\Research\Projects\Path_Integral_NN_MD\24020801\2_2_V_general\a_Data_sampling\Sample_store\Langevin_sample_store_V_general_mix_betadim=2_Msp=32768_Num_rep=32_Delta_t_sample=2_dt=0.005.csv';
 	% csv_file_path_2 = 'G:\Research\Projects\Path_Integral_NN_MD\24020801\2_2_V_general\a_Data_sampling\Sample_store\Langevin_sample_store_V_general_dim=2_Msp=1000000_Delta_t_sample=1_dt=0.01_beta=1.csv';
 	% csv_file_path_1 = 'C:\Users\ander\Documents\Python_space\Projects\potential_training_6\tests\24012902\2_2_V_general\b2_SGD_Training\Langevin_sample_store_V_general_dim=2_Msp=1000000_Delta_t_sample=1_dt=0.01_beta=0.2.csv';
 	% csv_file_path_2 = 'C:\Users\ander\Documents\Python_space\Projects\potential_training_6\tests\24012902\2_2_V_general\b2_SGD_Training\Langevin_sample_store_V_general_dim=2_Msp=1000000_Delta_t_sample=1_dt=0.01_beta=1.csv';
