@@ -76,13 +76,14 @@
 		figure( 3 )
 		plot( x_0_sample_store( :, 1 ), x_0_sample_store( :, 2 ), '.' );
 		
-		
+		%{
 		if ( ~exist( 'Sample_store', 'dir' ) )
 			mkdir( 'Sample_store' );
         end
+		%}
         Delta_t_sample = 2;
 		sample_matrix = [ x_0_sample_store, V_x0_sample_store, V_prime_x0_sample_store ];
-		filename = "Sample_store\Langevin_sample_store_V_general_one_beta" + "_dim=" + dim + "_Msp=" + M_sp + "_Num_rep=" + Num_replica + "_Delta_t_sample=" + Delta_t_sample + "_dt=" + h_x_sample + ".csv";
+		filename = "..\d1_Visualisation_and_Data_Storage\Data_saved\Sample_store\Langevin_sample_store_V_general_one_beta" + "_dim=" + dim + "_Msp=" + M_sp + "_Num_rep=" + Num_replica + "_Delta_t_sample=" + Delta_t_sample + "_dt=" + h_x_sample + ".csv";
 		writematrix( sample_matrix, filename )
 
 
