@@ -189,8 +189,7 @@
 			beta_hat_gd_init = ones( K, 1 );
 			beta_hat_gd_0 = Newton_Raphson_beta( S_mat_gd, beta_hat_gd_init, y_data, N, K, lambda_1, lambda_2, N_num_Newton_beta );
 			beta_hat_gd = beta_hat_gd_0;
-            %%% Important for debugging later with Gauss-Newton method
-            % beta_hat_gd;
+            beta_hat_gd;
             for m = 1 : 1 : M
 			    
                 %{
@@ -217,8 +216,7 @@
 				dL_domega_2 = dL1_domega_2.' + dL21_domega_2 + dL22_domega_2;
 				
                 dL_domega = [ dL_domega_1, dL_domega_2 ];
-                %%% Important for debugging later with Gauss-Newton method
-                % max( max( abs( dL_domega ) ) )
+                max( max( abs( dL_domega ) ) )
 
 				% beta_hat_sgd_new = beta_hat_sgd - delta_lr_beta * dL_dbeta;
 				omega_gd_new = omega_gd - delta_lr_omega * dL_domega;

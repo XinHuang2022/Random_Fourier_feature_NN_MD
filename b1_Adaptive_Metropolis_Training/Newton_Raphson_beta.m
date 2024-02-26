@@ -1,5 +1,5 @@
 	
-	function beta_hat_new = Newton_Raphson_beta( S_mat, beta_hat_0, y_data, N, K, lambda_1, lambda_2, N_num_Newton_beta );
+	function beta_hat_new = Newton_Raphson_beta( S_mat, beta_hat_0, y_data, N, K, lambda_1, lambda_2, N_num_Newton_beta )
 	
 		beta_vec = beta_hat_0;
 		error_rec = zeros( N_num_Newton_beta, 1 );
