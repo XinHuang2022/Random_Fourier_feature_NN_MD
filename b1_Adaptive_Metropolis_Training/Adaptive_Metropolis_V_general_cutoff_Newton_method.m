@@ -37,7 +37,14 @@
 	
 	Mix_beta_flag = input( 'Use single or mixed beta for training data?\n For single beta please input 1, for mixed beta please input 2:\n ' );
 	Use_laptop_flag = input( 'Using personal laptop or the office desktop?\n For personal laptop please input 1, for office desktop please input 2:\n ' );
-	if( Mix_beta_true == 2 )
+	M_sp = 2^15;    % M_sp is the sample set size in the data generation pipeline with Langevin dynamics sampling
+	Num_replica = 32;    % Num_replica is the number of independent training data set from the data generation pipeline
+	Delta_t_sample = 2;    % Delta_t_sample is the time difference between two samples in the Langevin dynamics sampling step
+	h_x_sample = 0.005;    % h_x_sample is the time step size in the Langevin dynamics sampling 
+	
+	
+	%{
+	if( Mix_beta_flag == 2 )
 		if( Use_laptop_flag == 1 )
 			csv_file_path_1 = 'G:\Research\Projects\Path_Integral_NN_MD\24020801\2_2_V_general\a_Data_sampling\Sample_store\Langevin_sample_store_V_general_mix_betadim=2_Msp=32768_Num_rep=32_Delta_t_sample=2_dt=0.005.csv';
 		elseif( Use_laptop_flag == 2 )
@@ -49,6 +56,12 @@
 		elseif( Use_laptop_flag == 2 )
 			csv_file_path_1 = 'C:\Users\ander\Documents\MATLAB\Path_Integral_MD_NN\24021901\24020801\2_2_V_general\a_Data_sampling\Sample_store\Langevin_sample_store_V_general_one_beta_dim=2_Msp=32768_Num_rep=32_Delta_t_sample=2_dt=0.005.csv';
 		end
+	end
+	%}
+	if( Mix_beta_flag == 2 )
+		csv_file_path_1 = "..\d1_Visualisation_and_Data_Storage\Data_saved\Sample_store\Langevin_sample_store_V_general_mix_beta" + "_dim=" + dim + "_Msp=" + M_sp + "_Num_rep=" + Num_replica + "_Delta_t_sample=" + Delta_t_sample + "_dt=" + h_x_sample + ".csv"
+	elseif( Mix_beta_flag == 1 )
+		csv_file_path_1 = "..\d1_Visualisation_and_Data_Storage\Data_saved\Sample_store\Langevin_sample_store_V_general_one_beta" + "_dim=" + dim + "_Msp=" + M_sp + "_Num_rep=" + Num_replica + "_Delta_t_sample=" + Delta_t_sample + "_dt=" + h_x_sample + ".csv"
 	end
 	% csv_file_path_1 = 'G:\Research\Projects\Path_Integral_NN_MD\24020801\2_2_V_general\a_Data_sampling\Sample_store\Langevin_sample_store_V_general_mix_betadim=2_Msp=32768_Num_rep=32_Delta_t_sample=2_dt=0.005.csv';
 	% csv_file_path_2 = 'G:\Research\Projects\Path_Integral_NN_MD\24020801\2_2_V_general\a_Data_sampling\Sample_store\Langevin_sample_store_V_general_dim=2_Msp=1000000_Delta_t_sample=1_dt=0.01_beta=1.csv';
