@@ -18,9 +18,8 @@
 		contourf( X, Y, Z_true, 20, 'LineStyle', 'none' ); % Filled contour plot
 		hold on;
 		contour( X, Y, Z_true, 5, 'LineColor', 'k' ); % Contour lines
-        %}
 		colorbar;
-	
+		%}
 		xlabel( 'x_1-axis' );
 		ylabel( 'x_2-axis' );
 		zlabel( 'V(x_1, x_2)' );
@@ -157,7 +156,7 @@
 	    optimal_p_vals_sum = sum( optimal_p_vals, "all" ) * ( xedge( 1, 2 ) - xedge( 1, 1 ) ) * ( yedge( 1, 2 ) - yedge( 1, 1 ) );
 	    optimal_p_vals = optimal_p_vals / optimal_p_vals_sum;
 	    
-	    figure18 = figure( 18 );
+	    fig18 = figure( 18 );
 	    surf( Omega_1, Omega_2, optimal_p_vals, 'EdgeColor', 'none' );
 	    xlabel('\omega_1')
 	    ylabel('\omega_2')
@@ -166,6 +165,15 @@
 		set( gcf, 'Units', 'inches', 'Position', [ 0, 0, fig_width, fig_height ] ) ;
         colorbar; 
         view( 0, 90 )
+		
+		p_omega_emp_AM_filename = sprintf( 'Empirical_omega_pdf_AM.fig' );
+		saveas( fig16, fullfile( folderName, p_omega_emp_AM_filename ) );
+		
+		p_omega_emp_GD_filename = sprintf( 'Empirical_omega_pdf_GD.fig' );
+		saveas( fig17, fullfile( folderName, p_omega_emp_GD_filename ) );
+		
+		pn_omega_optim_filename = sprintf( 'Optimal_omega_pdf.fig' );
+		saveas( fig18, fullfile( folderName, pn_omega_optim_filename ) );
         
 		V_2d_plot_status = 1;
 		
