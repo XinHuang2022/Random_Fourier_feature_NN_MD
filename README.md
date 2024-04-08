@@ -1,4 +1,4 @@
-# Implementation of random Fourier feature neural network approximation of potential field in molecular dunamics
+# Implementation of random Fourier feature neural network approximation of potential field in molecular dynamics
 
 ## Purpose
 
