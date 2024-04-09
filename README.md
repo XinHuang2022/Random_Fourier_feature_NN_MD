@@ -20,7 +20,7 @@ The **complete workflow** is decomposed into **four pipelines**, namely:
 The main function can be accessed through the file named `main.m`, which contains four sections corresponding to the four pipelines introduced above. 
 Some numerical tests of interest by varying the parameters could be:
 * Changing the largest integer in the array `K_values`, which presents different performances of the Fourier feature network in reconstructing the potential function and in approximating the correlation function.
-* Varying the training data set size parameter `J`, e.g., by contrasting the training results obtained with $J=10^4$ and $J=10^5$, we observe a smaller generalization error (testing loss) for the larger data set size $J$.
+* Varying the training data set size parameter `J`, e.g., by contrasting the training results obtained with $J=10^4$ and $J=10^5$, we observe a decreased generalization error (testing loss) for the larger data set size $J$.
 * Switching the paremeter `Mix_beta_true`. Setting `Mix_beta_true = 1` will implement the sampling under one fixed inverse temperature $\beta=1$, while setting `Mix_beta_true = 2` will implement a hybrid sampling technique under two inverse temperatures $\beta_1=1$ and $\beta_2=0.3$, each contributing half of the more comprehensive training data set.
 * Increasing (or decreasing) the sample size parameter `M_MC` for the Monte Carlo integral in the phase space to approximately evaluate the correlation function will give smaller (or larger) statistical uncertainty in the numerical results.
 
