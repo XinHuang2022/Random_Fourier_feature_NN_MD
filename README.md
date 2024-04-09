@@ -4,7 +4,7 @@
 
 This repository contains the **MATLAB** code for an implementation applying Fourier feature neural network representation $\bar{v}_r(x)$ to approximate the target potential function $v(x)$ in molecular dynamics simulation. 
 
-The training of the network is based on a given training data set $`\big\{ \big(x_j,v(x_j), v'(x_j)\big)\ |\ j=1,\ldots,J \big\}`$, with the aim to approximate the correlation observables by using the reconstructed potential $\bar{v}_r(x)$ instead of the computationaly costly true potential $v(x)$ in molecular dynamics.
+The training of the network is based on a sampled training data set $`\big\{ \big(x_j,v(x_j), v'(x_j)\big)\ |\ j=1,\ldots,J \big\}`$, with the aim to approximate the correlation observables by using the reconstructed potential $\bar{v}_r(x)$ instead of the computationaly costly true potential $v(x)$ in molecular dynamics.
 
 The **complete workflow** is decomposed into **four pipelines**, namely: 
 * **Data sampling pipeline**: For sampling of the training data set and the corresponding testing data set utilizing the overdamped Langevin dynamics, under the true potential function $v(x)$ with fixed inverse temperature $\beta$.
