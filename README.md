@@ -51,7 +51,7 @@ The specification of the parameters in each pipeline are summarized as following
 
 **Visualization pipeline**
 
-The visualization pipeline will not introduce any new parameters, but will require to load the data from an pre-stored array, which contains the reference values of the correlation function at each time point $\tau_i$ with high accuracy, so as to compute the $L^1$-error of the approximated correlation function curve.
+The visualization pipeline will not introduce any new parameters, but will require to load the data from an pre-stored array, which contains the *reference values* of the correlation function at each time point $\tau_i$ with high accuracy, so as to compute the $L^1$-error of the approximated correlation function curve.
 
 The code for generating the reference correlation function curve is provided in the subdirectory `e_Reference_curve_generating`.
 
