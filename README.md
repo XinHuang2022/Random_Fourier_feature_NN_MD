@@ -41,7 +41,7 @@ The specification of the parameters in each pipeline are summarized as following
 
 **Training pipeline**
 *  `lambda_1`, `lambda_2`, and `lambda_3`:  the weight parameters of the penalization terms in the regularized loss function $\mathcal{L}_R(\omega, \eta)$.
-*  `C_const_bound`:                         the constant parameter $C$ in the third penalization term of the regularized loss function $\mathcal{L}_R(\omega, \eta)$.
+*  `C_const_bound`:                         the constant parameter $C''$ in the third penalization term of the regularized loss function $\mathcal{L}_R(\omega, \eta)$.
 *  `K_values`:                              an array containing a series of integer numbers, preferrably in the form of $2^M$, where $M=4,5,\dots,10$, denoting the number of nodes in the Fourier feature network.
 
 **Inference pipeline**
