@@ -48,7 +48,7 @@
 	
     	K_values = [ 16, 32, 64, 128, 256, 512, 1024 ];
 	
-	Training_Flag = Training_Adaptive_Metropolis( dim, J, lambda_1, lambda_2, lambda_3, C_const_bound, K_values, Num_replica, Training_pipeline_path );
+	Training_Flag = Training_Adaptive_Metropolis( dim, J, lambda_1, lambda_2, lambda_3, C_const_bound, K_values, Num_parallel_worker, Num_replica, Training_pipeline_path );
 	
 	%%  Correlation function inference pipeline
 	M_MC = 2^16;								% M_MC is the number of samples for the Monte Carlo integral to evaluate the approximated correlation function using the trained potential function
