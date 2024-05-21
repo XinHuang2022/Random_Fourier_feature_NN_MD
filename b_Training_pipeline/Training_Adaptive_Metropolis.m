@@ -1,5 +1,5 @@
  		
-	function Training_status = Training_Adaptive_Metropolis( dim, N, lambda_1, lambda_2, lambda_3, C_const_bound, K_values, Num_replica, Training_data_store_path )	
+	function Training_status = Training_Adaptive_Metropolis( dim, N, lambda_1, lambda_2, lambda_3, C_const_bound, K_values, Num_parallel_worker, Num_replica, Training_data_store_path )	
 		
 		N_test = N;   					% N_test is the testing data set size
 
@@ -21,7 +21,7 @@
 		data_subfolder_name = fullfile( Training_data_store_path, 'training_data_temp' );
 		
 		early_stopping_steps_num = 20;
-		parpool( 64 );
+		parpool( round( Num_parallel_worker / 2 ) );
 		tic 
 
 		parfor q = 1 : Q
