@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This repository contains the **MATLAB** code for the manuscript titled [*Convergence Rates for Random Feature Neural Network Approximation in Molecular Dynamics*](https://arxiv.org/pdf/2406.14791) with an application of Fourier feature network representation $\bar{v}_r(x)$ to approximate the target potential function $v(x)$ in molecular dynamics simulation. 
+This repository contains the **MATLAB** code for the manuscript titled [*Convergence Rates for Random Feature Neural Network Approximation in Molecular Dynamics*](https://arxiv.org/abs/2406.14791) with an application of Fourier feature network representation $\bar{v}_r(x)$ to approximate the target potential function $v(x)$ in molecular dynamics simulation. 
 
 The training of the network is based on a sampled training data set $`\big\{ \big(x_j,V(x_j), \nabla V(x_j)\big)\ |\ j=1,\ldots,J \big\}`$, with the aim to approximate the correlation observables by using the reconstructed potential $\bar{v}_r(x)$ instead of the computationaly costly true potential $V(x)$ to obtain the force fields for molecular dynamics.
 
