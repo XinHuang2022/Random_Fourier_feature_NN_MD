@@ -2,11 +2,11 @@
 
 ## Purpose
 
-This repository contains the **MATLAB** code for the manuscript titled [*Convergence Rates for Random Feature Neural Network Approximation in Molecular Dynamics*](https://arxiv.org/abs/2406.14791) with an application of Fourier feature network representation $\bar{v}_r(x)$ to approximate the target potential function $V(x)$ in molecular dynamics simulation. 
+This repository contains the **MATLAB** code for the manuscript titled [*Convergence Rates for Random Feature Neural Network Approximation in Molecular Dynamics*](https://arxiv.org/abs/2406.14791), with an application of Fourier feature network representation $\bar{v}_r(x)$ to approximate the target potential function $V(x)$ in molecular dynamics simulation. 
 
 The training of the network is based on a sampled training data set $`\big\{ \big(x_j,V(x_j), \nabla V(x_j)\big)\ |\ j=1,\ldots,J \big\}`$, with the aim to approximate the correlation observables by using the reconstructed potential $\bar{v}_r(x)$ instead of the computationaly costly true potential $V(x)$ to obtain the force fields for molecular dynamics.
 
-The **complete workflow** is decomposed into **four pipelines**, namely: 
+The **complete workflow** is decomposed into **four separate pipelines**, namely: 
 * **Data sampling pipeline**: For sampling of the training data set and the corresponding testing data set utilizing the overdamped Langevin dynamics, under the true potential function $V(x)$ with fixed inverse temperature $\beta$.
 * **Training pipeline**: For the optimization of the Fourier feature network with updates on the trainable frequency parameters $`\{\omega_k\}_{k=1}^K`$ and the corresponding amplitude coefficients $`\{\eta_k\}_{k=1}^K,`$ in order to minimize the regularized loss function
 
